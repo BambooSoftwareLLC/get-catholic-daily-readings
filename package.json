@@ -4,7 +4,8 @@
   "description": "Utility to get the daily Catholic readings from the internet",
   "main": "dist/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
