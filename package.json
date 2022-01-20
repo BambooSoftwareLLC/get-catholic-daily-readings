@@ -1,0 +1,26 @@
+{
+  "name": "get-catholic-daily-readings",
+  "version": "1.0.0",
+  "description": "Utility to get the daily Catholic readings from the internet",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BambooSoftwareLLC/get-catholic-daily-readings.git"
+  },
+  "keywords": [
+    "catholic",
+    "bible",
+    "readings",
+    "christian",
+    "God"
+  ],
+  "author": "Michael Harris",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BambooSoftwareLLC/get-catholic-daily-readings/issues"
+  },
+  "homepage": "https://github.com/BambooSoftwareLLC/get-catholic-daily-readings#readme"
+}
