@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5JHPTP');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <script
+        type="text/javascript">(window.NREUM || (NREUM = {})).init = { ajax: { deny_list: ["bam-cell.nr-data.net"] } }; (window.NREUM || (NREUM = {})).loader_config = { licenseKey: "NRJS-ec985e558554ae170a3", applicationID: "603506239" }; window.NREUM || (NREUM = {}), __nr_require = function (t, e, n) { function r(n) { if (!e[n]) { var i = e[n] = { exports: {} }; t[n][0].call(i.exports, function (e) { var i = t[n][1][e]; return r(i || e) }, i, i.exports) } return e[n].exports } if ("function" == typeof __nr_require) return __nr_require; for (var i = 0; i < n.length; i++)r(n[i]); return r }({ 1: [function (t, e, n) { function r() { } function i(t, e, n, r) { return function () { return s.recordSupportability("API/" + e + "/called"), o(t + e, [u.now()].concat(c(arguments)), n ? null : this, r), n ? void 0 : this } } var o = t("handle"), a = t(10), c = t(11), f = t("ee").get("tracer"), u = t("loader"), s = t(4), d = NREUM; "undefined" == typeof window.newrelic && (newrelic = d); var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace", "inlineHit", "addRelease"], l = "api-", v = l + "ixn-"; a(p, function (t, e) { d[e] = i(l, e, !0, "api") }), d.addPageAction = i(l, "addPageAction", !0), d.setCurrentRouteName = i(l, "routeName", !0), e.exports = newrelic, d.interaction = function () { return (new r).get() }; var m = r.prototype = { createTracer: function (t, e) { var n = {}, r = this, i = "function" == typeof e; return o(v + "tracer", [u.now(), t, n], r), function () { if (f.emit((i ? "" : "no-") + "fn-start", [u.now(), r, i], n), i) try { return e.apply(this, arguments) } catch (t) { throw f.emit("fn-err", [arguments, this, t], n), t } finally { f.emit("fn-end", [u.now()], n) } } } }; a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (t, e) { m[e] = i(v, e) }), newrelic.noticeError = function (t, e) { "string" == typeof t && (t = new Error(t)), s.recordSupportability("API/noticeError/called"), o("err", [t, u.now(), !1, e]) } }, {}], 2: [function (t, e, n) { function r(t) { if (NREUM.init) { for (var e = NREUM.init, n = t.split("."), r = 0; r < n.length - 1; r++)if (e = e[n[r]], "object" != typeof e) return; return e = e[n[n.length - 1]] } } e.exports = { getConfiguration: r } }, {}], 3: [function (t, e, n) { var r = !1; try { var i = Object.defineProperty({}, "passive", { get: function () { r = !0 } }); window.addEventListener("testPassive", null, i), window.removeEventListener("testPassive", null, i) } catch (o) { } e.exports = function (t) { return r ? { passive: !0, capture: !!t } : !!t } }, {}], 4: [function (t, e, n) { function r(t, e) { var n = [a, t, { name: t }, e]; return o("storeMetric", n, null, "api"), n } function i(t, e) { var n = [c, t, { name: t }, e]; return o("storeEventMetrics", n, null, "api"), n } var o = t("handle"), a = "sm", c = "cm"; e.exports = { constants: { SUPPORTABILITY_METRIC: a, CUSTOM_METRIC: c }, recordSupportability: r, recordCustom: i } }, {}], 5: [function (t, e, n) { function r() { return c.exists && performance.now ? Math.round(performance.now()) : (o = Math.max((new Date).getTime(), o)) - a } function i() { return o } var o = (new Date).getTime(), a = o, c = t(12); e.exports = r, e.exports.offset = a, e.exports.getLastTimestamp = i }, {}], 6: [function (t, e, n) { function r(t) { return !(!t || !t.protocol || "file:" === t.protocol) } e.exports = r }, {}], 7: [function (t, e, n) { function r(t, e) { var n = t.getEntries(); n.forEach(function (t) { "first-paint" === t.name ? p("timing", ["fp", Math.floor(t.startTime)]) : "first-contentful-paint" === t.name && p("timing", ["fcp", Math.floor(t.startTime)]) }) } function i(t, e) { var n = t.getEntries(); if (n.length > 0) { var r = n[n.length - 1]; if (f && f < r.startTime) return; p("lcp", [r]) } } function o(t) { t.getEntries().forEach(function (t) { t.hadRecentInput || p("cls", [t]) }) } function a(t) { if (t instanceof g && !y) { var e = Math.round(t.timeStamp), n = { type: t.type }; e <= l.now() ? n.fid = l.now() - e : e > l.offset && e <= Date.now() ? (e -= l.offset, n.fid = l.now() - e) : e = l.now(), y = !0, p("timing", ["fi", e, n]) } } function c(t) { "hidden" === t && (f = l.now(), p("pageHide", [f])) } if (!("init" in NREUM && "page_view_timing" in NREUM.init && "enabled" in NREUM.init.page_view_timing && NREUM.init.page_view_timing.enabled === !1)) { var f, u, s, d, p = t("handle"), l = t("loader"), v = t(9), m = t(3), g = NREUM.o.EV; if ("PerformanceObserver" in window && "function" == typeof window.PerformanceObserver) { u = new PerformanceObserver(r); try { u.observe({ entryTypes: ["paint"] }) } catch (h) { } s = new PerformanceObserver(i); try { s.observe({ entryTypes: ["largest-contentful-paint"] }) } catch (h) { } d = new PerformanceObserver(o); try { d.observe({ type: "layout-shift", buffered: !0 }) } catch (h) { } } if ("addEventListener" in document) { var y = !1, w = ["click", "keydown", "mousedown", "pointerdown", "touchstart"]; w.forEach(function (t) { document.addEventListener(t, a, m(!1)) }) } v(c) } }, {}], 8: [function (t, e, n) { function r(t, e) { if (!i) return !1; if (t !== i) return !1; if (!e) return !0; if (!o) return !1; for (var n = o.split("."), r = e.split("."), a = 0; a < r.length; a++)if (r[a] !== n[a]) return !1; return !0 } var i = null, o = null, a = /Version\/(\S+)\s+Safari/; if (navigator.userAgent) { var c = navigator.userAgent, f = c.match(a); f && c.indexOf("Chrome") === -1 && c.indexOf("Chromium") === -1 && (i = "Safari", o = f[1]) } e.exports = { agent: i, version: o, match: r } }, {}], 9: [function (t, e, n) { function r(t) { function e() { t(c && document[c] ? document[c] : document[o] ? "hidden" : "visible") } "addEventListener" in document && a && document.addEventListener(a, e, i(!1)) } var i = t(3); e.exports = r; var o, a, c; "undefined" != typeof document.hidden ? (o = "hidden", a = "visibilitychange", c = "visibilityState") : "undefined" != typeof document.msHidden ? (o = "msHidden", a = "msvisibilitychange") : "undefined" != typeof document.webkitHidden && (o = "webkitHidden", a = "webkitvisibilitychange", c = "webkitVisibilityState") }, {}], 10: [function (t, e, n) { function r(t, e) { var n = [], r = "", o = 0; for (r in t) i.call(t, r) && (n[o] = e(r, t[r]), o += 1); return n } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], 11: [function (t, e, n) { function r(t, e, n) { e || (e = 0), "undefined" == typeof n && (n = t ? t.length : 0); for (var r = -1, i = n - e || 0, o = Array(i < 0 ? 0 : i); ++r < i;)o[r] = t[e + r]; return o } e.exports = r }, {}], 12: [function (t, e, n) { e.exports = { exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" != typeof window.performance.timing.navigationStart } }, {}], ee: [function (t, e, n) { function r() { } function i(t) { function e(t) { return t && t instanceof r ? t : t ? u(t, f, a) : a() } function n(n, r, i, o, a) { if (a !== !1 && (a = !0), !l.aborted || o) { t && a && t(n, r, i); for (var c = e(i), f = m(n), u = f.length, s = 0; s < u; s++)f[s].apply(c, r); var p = d[w[n]]; return p && p.push([b, n, r, c]), c } } function o(t, e) { y[t] = m(t).concat(e) } function v(t, e) { var n = y[t]; if (n) for (var r = 0; r < n.length; r++)n[r] === e && n.splice(r, 1) } function m(t) { return y[t] || [] } function g(t) { return p[t] = p[t] || i(n) } function h(t, e) { l.aborted || s(t, function (t, n) { e = e || "feature", w[n] = e, e in d || (d[e] = []) }) } var y = {}, w = {}, b = { on: o, addEventListener: o, removeEventListener: v, emit: n, get: g, listeners: m, context: e, buffer: h, abort: c, aborted: !1 }; return b } function o(t) { return u(t, f, a) } function a() { return new r } function c() { (d.api || d.feature) && (l.aborted = !0, d = l.backlog = {}) } var f = "nr@context", u = t("gos"), s = t(10), d = {}, p = {}, l = e.exports = i(); e.exports.getOrSetContext = o, l.backlog = d }, {}], gos: [function (t, e, n) { function r(t, e, n) { if (i.call(t, e)) return t[e]; var r = n(); if (Object.defineProperty && Object.keys) try { return Object.defineProperty(t, e, { value: r, writable: !0, enumerable: !1 }), r } catch (o) { } return t[e] = r, r } var i = Object.prototype.hasOwnProperty; e.exports = r }, {}], handle: [function (t, e, n) { function r(t, e, n, r) { i.buffer([t], r), i.emit(t, e, n) } var i = t("ee").get("handle"); e.exports = r, r.ee = i }, {}], id: [function (t, e, n) { function r(t) { var e = typeof t; return !t || "object" !== e && "function" !== e ? -1 : t === window ? 0 : a(t, o, function () { return i++ }) } var i = 1, o = "nr@id", a = t("gos"); e.exports = r }, {}], loader: [function (t, e, n) { function r() { if (!T++) { var t = P.info = NREUM.info, e = g.getElementsByTagName("script")[0]; if (setTimeout(u.abort, 3e4), !(t && t.licenseKey && t.applicationID && e)) return u.abort(); f(O, function (e, n) { t[e] || (t[e] = n) }); var n = a(); c("mark", ["onload", n + P.offset], null, "api"), c("timing", ["load", n]); var r = g.createElement("script"); 0 === t.agent.indexOf("http://") || 0 === t.agent.indexOf("https://") ? r.src = t.agent : r.src = v + "://" + t.agent, e.parentNode.insertBefore(r, e) } } function i() { "complete" === g.readyState && o() } function o() { c("mark", ["domContent", a() + P.offset], null, "api") } var a = t(5), c = t("handle"), f = t(10), u = t("ee"), s = t(8), d = t(6), p = t(2), l = t(3), v = p.getConfiguration("ssl") === !1 ? "http" : "https", m = window, g = m.document, h = "addEventListener", y = "attachEvent", w = m.XMLHttpRequest, b = w && w.prototype, E = !d(m.location); NREUM.o = { ST: setTimeout, SI: m.setImmediate, CT: clearTimeout, XHR: w, REQ: m.Request, EV: m.Event, PR: m.Promise, MO: m.MutationObserver }; var x = "" + location, O = { beacon: "bam.nr-data.net", errorBeacon: "bam.nr-data.net", agent: "js-agent.newrelic.com/nr-1212.min.js" }, M = w && b && b[h] && !/CriOS/.test(navigator.userAgent), P = e.exports = { offset: a.getLastTimestamp(), now: a, origin: x, features: {}, xhrWrappable: M, userAgent: s, disabled: E }; if (!E) { t(1), t(7), g[h] ? (g[h]("DOMContentLoaded", o, l(!1)), m[h]("load", r, l(!1))) : (g[y]("onreadystatechange", i), m[y]("onload", r)), c("mark", ["firstbyte", a.getLastTimestamp()], null, "api"); var T = 0 } }, {}], "wrap-function": [function (t, e, n) { function r(t, e) { function n(e, n, r, f, u) { function nrWrapper() { var o, a, s, p; try { a = this, o = d(arguments), s = "function" == typeof r ? r(o, a) : r || {} } catch (l) { i([l, "", [o, a, f], s], t) } c(n + "start", [o, a, f], s, u); try { return p = e.apply(a, o) } catch (v) { throw c(n + "err", [o, a, v], s, u), v } finally { c(n + "end", [o, a, p], s, u) } } return a(e) ? e : (n || (n = ""), nrWrapper[p] = e, o(e, nrWrapper, t), nrWrapper) } function r(t, e, r, i, o) { r || (r = ""); var c, f, u, s = "-" === r.charAt(0); for (u = 0; u < e.length; u++)f = e[u], c = t[f], a(c) || (t[f] = n(c, s ? f + r : r, i, f, o)) } function c(n, r, o, a) { if (!v || e) { var c = v; v = !0; try { t.emit(n, r, o, e, a) } catch (f) { i([f, n, r, o], t) } v = c } } return t || (t = s), n.inPlace = r, n.flag = p, n } function i(t, e) { e || (e = s); try { e.emit("internal-error", t) } catch (n) { } } function o(t, e, n) { if (Object.defineProperty && Object.keys) try { var r = Object.keys(t); return r.forEach(function (n) { Object.defineProperty(e, n, { get: function () { return t[n] }, set: function (e) { return t[n] = e, e } }) }), e } catch (o) { i([o], n) } for (var a in t) l.call(t, a) && (e[a] = t[a]); return e } function a(t) { return !(t && t instanceof Function && t.apply && !t[p]) } function c(t, e) { var n = e(t); return n[p] = t, o(t, n, s), n } function f(t, e, n) { var r = t[e]; t[e] = c(r, n) } function u() { for (var t = arguments.length, e = new Array(t), n = 0; n < t; ++n)e[n] = arguments[n]; return e } var s = t("ee"), d = t(11), p = "nr@original", l = Object.prototype.hasOwnProperty, v = !1; e.exports = r, e.exports.wrapFunction = c, e.exports.wrapInPlace = f, e.exports.argsToArray = u }, {}] }, {}, ["loader"]);</script>
+    <link rel="canonical" href="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="USCCB" />
+    <meta name="twitter:title" content="Monday of the Thirtieth Week in Ordinary Time" />
+    <meta name="twitter:description"
+        content="Daily Bible Readings, Podcast Audio and Videos and Prayers brought to you by the United States Conference of Catholic Bishops." />
+    <meta name="twitter:site" content="@usccb" />
+    <meta name="description"
+        content="Daily Bible Readings, Podcast Audio and Videos and Prayers brought to you by the United States Conference of Catholic Bishops." />
+    <meta property="og:url" content="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <meta property="og:title" content="Monday of the Thirtieth Week in Ordinary Time" />
+    <meta name="twitter:creator" content="@usccb" />
+    <meta name="twitter:url" content="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <meta property="og:description"
+        content="Daily Bible Readings, Podcast Audio and Videos and Prayers brought to you by the United States Conference of Catholic Bishops." />
+    <meta name="twitter:image" content="https://bible.usccb.org/themes/custom/usccb_readings/images/share.jpg" />
+    <meta property="og:image" content="https://bible.usccb.org/themes/custom/usccb_readings/images/share.jpg" />
+    <meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Article",
+            "headline": "Monday of the Thirtieth Week in Ordinary Time",
+            "name": "Monday of the Thirtieth Week in Ordinary Time",
+            "description": "Daily Bible Readings, Podcast Audio and Videos and Prayers brought to you by the United States Conference of Catholic Bishops.",
+            "about": [
+                "bible",
+                "reading",
+                "daily"
+            ],
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://bible.usccb.org/sites/default/files/bible_reading.jpg",
+                "width": "2100",
+                "height": "1361"
+            },
+            "datePublished": "2015-10-26T08:00:00-0400",
+            "isAccessibleForFree": "True",
+            "dateModified": "2015-10-26T08:00:00-0400",
+            "author": {
+                "@type": "Organization",
+                "@id": "https://www.usccb.org/",
+                "name": "United States Conference of Catholic Bishops",
+                "url": "https://www.usccb.org/",
+                "sameAs": [
+                    "https://twitter.com/usccb",
+                    "https://www.facebook.com/usccb",
+                    "https://www.youtube.com/user/usccb",
+                    "https://www.linkedin.com/company/usccb/",
+                    "https://www.instagram.com/usccb/"
+                ],
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bible.usccb.org/sites/default/files/inline-images/usccb-logo-color.png",
+                    "width": "281",
+                    "height": "38"
+                }
+            },
+            "publisher": {
+                "@type": "Organization",
+                "@id": "https://www.usccb.org/",
+                "name": "United States Conference of Catholic Bishops",
+                "url": "https://www.usccb.org/",
+                "sameAs": [
+                    "https://twitter.com/usccb",
+                    "https://www.facebook.com/usccb",
+                    "https://www.youtube.com/user/usccb",
+                    "https://www.linkedin.com/company/usccb/",
+                    "https://www.instagram.com/usccb/"
+                ],
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://bible.usccb.org/sites/default/files/inline-images/usccb-logo-color.png",
+                    "width": "281",
+                    "height": "38"
+                }
+            }
+        }
+    ]
+}</script>
+    <meta property="og:url" content="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <meta property="og:title" content="Monday of the Thirtieth Week in Ordinary Time | USCCB" />
+    <meta property="og:image" content="https://bible.usccb.org/themes/custom/usccb_readings/images/share.jpg" />
+    <meta property="twitter:card" content="summary" />
+    <meta property="twitter:title" content="Monday of the Thirtieth Week in Ordinary Time | USCCB" />
+    <meta property="twitter:image" content="https://bible.usccb.org/themes/custom/usccb_readings/images/share.jpg" />
+    <meta property="twitter:url" content="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <link rel="shortcut icon" href="/sites/default/files/Ox8RYeG3.ico" type="image/vnd.microsoft.icon" />
+    <link rel="alternate" hreflang="en" href="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <link rel="alternate" hreflang="es" href="https://bible.usccb.org/es/bible/lecturas/102615.cfm" />
+    <link rel="revision" href="https://bible.usccb.org/bible/readings/102615.cfm" />
+    <link rel="amphtml" href="https://bible.usccb.org/bible/readings/102615.cfm?amp" />
+
+    <title>Monday of the Thirtieth Week in Ordinary Time | USCCB</title>
+    <link rel="stylesheet" media="all"
+        href="/sites/default/files/css/css_iJAaj-m4zU4cClRzfmXdsv4twk4Wqpe_a0ycXlefQEI.css" />
+    <link rel="stylesheet" media="all"
+        href="/sites/default/files/css/css_aSamZpoKvhgkOikWgFveK_Bd7D5UP_Ab51ITlXz0LpI.css" />
+
+
+    <!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <meta name="msvalidate.01" content="3269934155CEF2C15973D293DE678355" />
+</head>
+
+<body class="path-node page-node-type-daily-reading">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5JHPTP" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+        Skip to main content
+    </a>
+
+    <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <div class="layout-container">
+
+            <header id="header" role="banner">
+                <div class="container">
+                    <div class="region region-logo">
+                        <div id="block-ai-branding" class="block block-system block-system-branding-block">
+
+
+                            <a href="https://usccb.org" rel="home" class="site-logo">
+                                <img src="/themes/custom/usccb_readings/usccb-logo.svg" alt="Home" />
+                            </a>
+                        </div>
+
+                    </div>
+
+                    <div class="region region-header">
+                        <div class="wrapper">
+                            <div class="search-form block block-ai-search-form block-search-block"
+                                data-drupal-selector="search-form" id="block-searchblock">
+
+
+                                <span class="toggler icon-search"></span>
+                                <form action="/bible/readings/102615.cfm" method="post" id="search-form"
+                                    accept-charset="UTF-8">
+                                    <div
+                                        class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search form-no-label">
+                                        <input data-drupal-selector="edit-search" type="text" id="edit-search"
+                                            name="search" value="" size="60" maxlength="128" placeholder="Search"
+                                            class="form-text" />
+
+                                    </div>
+                                    <input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op"
+                                        value="Go" class="button js-form-submit form-submit" />
+                                    <input autocomplete="off"
+                                        data-drupal-selector="form-0mt7ut5ns6h2iqsmrk80uddblwr-qpvabdwl7b-ro4k"
+                                        type="hidden" name="form_build_id"
+                                        value="form-0MT7Ut5ns6h2IqsMrK80uDdbLwr_QPvaBDwl7B_RO4k" />
+                                    <input data-drupal-selector="edit-search-form" type="hidden" name="form_id"
+                                        value="search_form" />
+
+                                </form>
+
+                            </div>
+
+
+                            <nav role="navigation" aria-labelledby="block-menu-top-buttons-menu"
+                                id="block-menu-top-buttons" class="block block-menu navigation menu--top-buttons">
+
+                                <h2 class="visually-hidden" id="block-menu-top-buttons-menu">Menu: Top Buttons</h2>
+
+
+
+                                <ul class="menu">
+
+
+                                    <li class="menu-item">
+                                        <a href="https://store.usccb.org/" class="btn blue big store"
+                                            target="_blank">Store</a>
+                                    </li>
+
+
+                                    <li class="menu-item mobile-off">
+                                        <a href="https://usccb.org/help-now" class="btn big" target="_self"
+                                            data-drupal-link-system-path="node/25731">Help Now</a>
+                                    </li>
+
+
+                                    <li class="menu-item mobile-on">
+                                        <a href="https://bible.usccb.org/" class="btn big">Readings</a>
+                                    </li>
+
+
+                                    <li class="menu-item">
+                                        <a href="https://usccb.org/search" class="icon icon-search no-label"
+                                            data-drupal-link-system-path="search">Search</a>
+                                    </li>
+                                </ul>
+
+
+
+                            </nav>
+
+
+
+                            <nav role="navigation" aria-labelledby="block-menu-top-menu" id="block-menu-top"
+                                class="block block-menu navigation menu--top">
+
+                                <h2 class="visually-hidden" id="block-menu-top-menu">Menu: Top</h2>
+
+
+
+                                <ul class="menu">
+
+
+                                    <li class="menu-item">
+                                        <a href="https://bible.usccb.org/" class="no-margin">Daily Readings</a>
+                                    </li>
+
+
+                                    <li class="menu-item">
+                                        <a href="https://bible.usccb.org/readings/calendar"
+                                            class="icon-calendar no-name">Daily Readings Calendar</a>
+                                    </li>
+
+
+                                    <li class="menu-item">
+                                        <a href="https://usccb.org/mass-times"
+                                            data-drupal-link-system-path="mass-times">Find a Parish</a>
+                                    </li>
+
+
+                                    <li class="menu-item">
+                                        <a href="https://usccb.org/committees/protection-children-young-people/how-report-abuse"
+                                            data-drupal-link-system-path="node/51478">Report Abuse</a>
+                                    </li>
+                                </ul>
+
+
+
+                            </nav>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </header>
+            <div id="primary_menu" role="banner">
+                <div class="container">
+                    <div class="region region-primary-menu">
+                        <div id="block-importedmenumain"
+                            class="block block-block-content block-block-content604d0cab-656d-4261-ab18-80c24d9bdbd0">
+
+
+
+                            <nav role="navigation" aria-labelledby="block-ai-main-menu-menu" id="block-ai-main-menu"
+                                class="block block-menu navigation menu--main">
+
+                                <h2 class="visually-hidden" id="block-ai-main-menu-menu">Main navigation</h2>
+
+
+
+                                <ul class="menu">
+
+
+                                    <li class="menu-item mobile-on">
+                                        <a href="https://bible.usccb.org/">Daily Readings</a>
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded">
+                                        <span class="linkoff">About USCCB</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/about"
+                                                    data-drupal-link-system-path="node/25775">Our Role &amp; Mission</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/about/strategic-plan"
+                                                    data-drupal-link-system-path="node/25780">Strategic Plan</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/about/leadership"
+                                                    data-drupal-link-system-path="node/25809">Leadership</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/about/bishops-and-dioceses"
+                                                    data-drupal-link-system-path="node/25779">Bishops and Dioceses</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices"
+                                                    data-drupal-link-system-path="node/25825">Offices &amp;
+                                                    Committees</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a
+                                                    href="https://usccb.org/committees/communications/usccb-general-assemblies">General
+                                                    Assemblies</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/about/financial-reporting"
+                                                    data-drupal-link-system-path="node/25782">Financial Reporting</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/careers"
+                                                    data-drupal-link-system-path="node/25777">Careers</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/events"
+                                                    data-drupal-link-system-path="events">Events</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/contact-us"
+                                                    data-drupal-link-system-path="node/25659">Contact</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded">
+                                        <span class="linkoff">Prayer &amp; Worship</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item">
+                                                <a href="https://bible.usccb.org/readings/calendar">Daily Readings
+                                                    Calendar</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/catholic-prayers"
+                                                    data-drupal-link-system-path="node/25816">Prayer</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/mass-times"
+                                                    data-drupal-link-system-path="mass-times">Search Mass Times</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/prayer-and-worship/the-mass"
+                                                    data-drupal-link-system-path="node/25850">The Mass</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/prayer-and-worship/sacraments-and-sacramentals"
+                                                    data-drupal-link-system-path="node/25826">Sacraments</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/prayer-and-worship/liturgy-of-the-hours"
+                                                    data-drupal-link-system-path="node/25818">Liturgy of the Hours</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/prayer-worship/liturgical-year"
+                                                    data-drupal-link-system-path="node/49484">Liturgical Year &amp;
+                                                    Calendar</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/prayer-and-worship/sacred-music-and-art"
+                                                    data-drupal-link-system-path="node/48300">Music &amp; Art</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded">
+                                        <span class="linkoff">Bible</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/bible/understanding-the-bible"
+                                                    data-drupal-link-system-path="node/25778">Understanding the
+                                                    Bible</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://bible.usccb.org/bible">Books of the Bible</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices/new-american-bible/approved-translations-bible"
+                                                    data-drupal-link-system-path="node/41935">Approved Translations</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/faq"
+                                                    data-drupal-link-system-path="taxonomy/term/8664">FAQs</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices/new-american-bible/study-materials"
+                                                    data-drupal-link-system-path="node/41917">Study Materials</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices/new-american-bible/liturgy"
+                                                    data-drupal-link-system-path="node/41919">The Bible in Liturgy</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices/new-american-bible/permissions"
+                                                    data-drupal-link-system-path="node/41922">Bible Permissions</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded">
+                                        <span class="linkoff">Issues &amp; Action</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item menu-item--expanded opened no-closed">
+                                                <a href="https://usccb.org/topics"
+                                                    data-drupal-link-system-path="node/25658">Topics</a>
+                                                <ul class="menu">
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/topics/catholic-safeguards"
+                                                            data-drupal-link-system-path="node/61199">Catholic
+                                                            Safeguards</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+
+
+                                            <li class="menu-item menu-item--expanded opened no-closed">
+                                                <span class="linkoff">Act Now</span>
+                                                <ul class="menu">
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/help-now"
+                                                            data-drupal-link-system-path="node/25731">Help Now</a>
+                                                    </li>
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/take-action"
+                                                            data-drupal-link-system-path="node/30414">Take Action</a>
+                                                    </li>
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://www.votervoice.net/USCCB/home"
+                                                            target="_blank">Contact Public Officials</a>
+                                                    </li>
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/events"
+                                                            data-drupal-link-system-path="events">Meetings &amp;
+                                                            Events</a>
+                                                    </li>
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/get-connected"
+                                                            data-drupal-link-system-path="node/25811">Get Connected</a>
+                                                    </li>
+
+
+                                                    <li class="menu-item">
+                                                        <a href="https://usccb.org/issues-and-action/take-action-now/pray"
+                                                            data-drupal-link-system-path="node/25851">Pray</a>
+                                                    </li>
+                                                </ul>
+
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded align-right">
+                                        <span class="linkoff">News</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/newsroom"
+                                                    data-drupal-link-system-path="newsroom">Newsroom</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://www.catholicnews.com/" target="_blank">Catholic News
+                                                    Service</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/offices/public-affairs"
+                                                    data-drupal-link-system-path="node/40">Public Affairs</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+
+
+                                    <li class="menu-item menu-item--expanded align-right">
+                                        <span class="linkoff">Resources</span>
+                                        <ul class="menu">
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/resources"
+                                                    data-drupal-link-system-path="node/25748">Resource Library</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a
+                                                    href="https://www.usccb.org/beliefs-and-teachings/what-we-believe/catechism/catechism-of-the-catholic-church">Catechism
+                                                    of the Catholic Church</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/get-connected"
+                                                    data-drupal-link-system-path="node/25811">Get Connected</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/subscribe/email"
+                                                    data-drupal-link-system-path="node/50856">Subscribe</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://www.catholicnews.com/movie-reviews/"
+                                                    target="_blank">Movie Reviews</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://usccb.org/events"
+                                                    data-drupal-link-system-path="events">Events Calendar</a>
+                                            </li>
+
+
+                                            <li class="menu-item">
+                                                <a href="https://catholiccurrent.org/"
+                                                    title="USCCB Resources for dioceses and parishes">Parish
+                                                    Resources</a>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+
+
+
+                            </nav>
+
+                        </div>
+                        <div id="block-colorlogo"
+                            class="b-color-logo block block-block-content block-block-contentac11a3d7-d882-4a0b-868e-977b3c672af2">
+
+
+
+                            <p><a href="/"><img alt="United States Conference of Catholic Bishops"
+                                        data-entity-type="file" data-entity-uuid="be71ae96-e4ab-488a-adc1-259f103ab267"
+                                        src="/sites/default/files/inline-images/usccb-logo-color.png" /></a></p>
+
+
+                        </div>
+                        <div class="search-form mobile block block-ai-search-form block-search-block"
+                            data-drupal-selector="search-form-2" id="block-searchblock-2">
+
+
+                            <form action="/bible/readings/102615.cfm" method="post" id="search-form--2"
+                                accept-charset="UTF-8">
+                                <div
+                                    class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search form-no-label">
+                                    <input data-drupal-selector="edit-search" type="text" id="edit-search--2"
+                                        name="search" value="" size="60" maxlength="128" placeholder="Search"
+                                        class="form-text" />
+
+                                </div>
+                                <input data-drupal-selector="edit-submit" type="submit" id="edit-submit--2" name="op"
+                                    value="Go" class="button js-form-submit form-submit" />
+                                <input autocomplete="off"
+                                    data-drupal-selector="form-vrcyb4-dehy326pgii7dviwzvah-4hajtomr3gbqdnw"
+                                    type="hidden" name="form_build_id"
+                                    value="form-vRCYb4-DEhy326Pgii7DviwZvah-4HajTOMr3GbQDnw" />
+                                <input data-drupal-selector="edit-search-form-2" type="hidden" name="form_id"
+                                    value="search_form" />
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <main id="page" role="main">
+                <div id="page-container">
+                    <a id="main-content" tabindex="-1"></a>
+                    <div class="layout-content">
+                        <div class="region region-content">
+                            <div data-drupal-messages-fallback class="hidden"></div>
+                            <div id="block-usccb-readings-content" class="block block-system block-system-main-block">
+
+
+
+
+
+                                <div role="article"
+                                    class="page-container node node--type-daily-reading node--promoted node--view-mode-full">
+                                    <div class="wr-block b-title-page padding-bottom-xxs to-center no-container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="p-wrap">
+                                                    <div class="innerblock">
+                                                        <h1 class="title-page">Daily Readings</h1>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div
+                                        class="wr-block b-pager readings border-bottom  padding-top-xs bg-white no-container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="p-wrap">
+                                                    <ul class="pager">
+                                                        <li><a href="/bible/readings/102515.cfm" class="prev" rel="prev"
+                                                                hreflang="en">October 25, 2015</a></li>
+                                                        <li class="current"><time datetime="2015-10-26">October 26,
+                                                                2015</time></li>
+                                                        <li><a href="/bible/readings/102715.cfm" class="next" rel="next"
+                                                                hreflang="en">October 27, 2015</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="b-button-container to-center border-bottom  padding-top-xs bg-white wr-block">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="p-wrap col-lg-10 offset-lg-1">
+                                                    <div class="innerblock">
+                                                        <ul>
+                                                            <li class="item">
+                                                                <a href="https://bible.usccb.org/es/bible/lecturas/102615.cfm"
+                                                                    class="btn transparent blue small language-selector language-es"
+                                                                    hreflang="es">En Español</a>
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="/readings/calendar"
+                                                                    class="btn transparent blue small">View Calendar</a>
+
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="#subscribe"
+                                                                    class="btn-icon icon-email transparent blue small">Get
+                                                                    Daily Readings E-mails</a>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wr-block b-lectionary padding-top-s padding-bottom-xxs bg-white">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
+                                                    <div class="innerblock">
+                                                        <h2>Monday of the Thirtieth Week in Ordinary Time
+                                                        </h2>
+                                                        <p>Lectionary: 479</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="wr-block b-verse bg-white padding-bottom-m">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3 ">
+                                                    <div class="innerblock">
+                                                        <div class="content-header">
+                                                            <h3 class="name">Reading 1 </h3>
+                                                            <div class="address">
+                                                                <a href="https://bible.usccb.org/bible/romans/8?12 ">Rom
+                                                                    8:12-17</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-body">
+                                                            Brothers and sisters,<br />we are not debtors to the
+                                                            flesh,<br />to live according to the flesh.<br />For if you
+                                                            live according to the flesh, you will die,<br />but if by
+                                                            the spirit you put to death the deeds of the body,<br />you
+                                                            will live.<br /><br />For those who are led by the Spirit of
+                                                            God are sons of God.<br />For you did not receive a spirit
+                                                            of slavery to fall back into fear,<br />but you received a
+                                                            spirit of adoption,<br />through which we cry,
+                                                            “<em>Abba</em>, Father!”<br />The Spirit himself bears
+                                                            witness with our spirit<br />that we are children of
+                                                            God,<br />and if children, then heirs,<br />heirs of God and
+                                                            joint heirs with Christ,<br />if only we suffer with
+                                                            him<br />so that we may also be glorified with him.<br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wr-block b-verse bg-white padding-bottom-m">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3 ">
+                                                    <div class="innerblock">
+                                                        <div class="content-header">
+                                                            <h3 class="name">Responsorial Psalm </h3>
+                                                            <div class="address">
+                                                                <a href="https://bible.usccb.org/bible/psalms/68?2 ">PS
+                                                                    68:2 and 4, 6-7ab, 20-21</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-body">
+                                                            R. (21a) <strong>Our God is the God of
+                                                                salvation.</strong><br />God arises; his enemies are
+                                                            scattered,<br />and those who hate him flee before
+                                                            him.<br />But the just rejoice and exult before
+                                                            God;<br />they are glad and rejoice.<br />R. <strong>Our God
+                                                                is the God of salvation.</strong><br />The father of
+                                                            orphans and the defender of widows<br />is God in his holy
+                                                            dwelling.<br />God gives a home to the forsaken;<br />he
+                                                            leads forth prisoners to prosperity.<br />R. <strong>Our God
+                                                                is the God of salvation.</strong><br />Blessed day by
+                                                            day be the Lord,<br />who bears our burdens; God, who is our
+                                                            salvation.<br />God is a saving God for us;<br />the LORD,
+                                                            my Lord, controls the passageways of death.<br />R.
+                                                            <strong>Our God is the God of salvation.</strong><br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wr-block b-verse bg-white padding-bottom-m">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3 ">
+                                                    <div class="innerblock">
+                                                        <div class="content-header">
+                                                            <h3 class="name">Alleluia </h3>
+                                                            <div class="address">
+                                                                <a href="https://bible.usccb.org/bible/john/17?17 ">Jn
+                                                                    17:17b, 17a</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-body">
+                                                            R. <strong>Alleluia, alleluia.</strong><br />Your word, O
+                                                            Lord, is truth;<br />consecrate us in the truth.<br />R.
+                                                            <strong>Alleluia, alleluia.</strong><br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wr-block b-verse bg-white padding-bottom-m">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3 ">
+                                                    <div class="innerblock">
+                                                        <div class="content-header">
+                                                            <h3 class="name">Gospel </h3>
+                                                            <div class="address">
+                                                                <a href="https://bible.usccb.org/bible/luke/13?10 ">Lk
+                                                                    13:10-17</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="content-body">
+                                                            Jesus was teaching in a synagogue on the sabbath.<br />And a
+                                                            woman was there who for eighteen years<br />had been
+                                                            crippled by a spirit;<br />she was bent over, completely
+                                                            incapable of standing erect.<br />When Jesus saw her, he
+                                                            called to her and said,<br />“Woman, you are set free of
+                                                            your infirmity.”<br />He laid his hands on her,<br />and she
+                                                            at once stood up straight and glorified God.<br />But the
+                                                            leader of the synagogue,<br />indignant that Jesus had cured
+                                                            on the sabbath,<br />said to the crowd in reply,<br />“There
+                                                            are six days when work should be done.<br />Come on those
+                                                            days to be cured, not on the sabbath day.”<br />The Lord
+                                                            said to him in reply, “Hypocrites!<br />Does not each one of
+                                                            you on the sabbath<br />untie his ox or his ass from the
+                                                            manger<br />and lead it out for watering?<br />This daughter
+                                                            of Abraham,<br />whom Satan has bound for eighteen years
+                                                            now,<br />ought she not to have been set free on the sabbath
+                                                            day<br />from this bondage?”<br />When he said this, all his
+                                                            adversaries were humiliated;<br />and the whole crowd
+                                                            rejoiced at all the splendid deeds done by him.<br />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="block block-ai-html-parser block-readings-books">
+
+
+                                        <div class="wr-block b-book-list bg-white bg-container padding-top-s padding-bottom-xs b-book-list-inline max-3col"
+                                            id="store-horizontal">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2">
+                                                        <div class="innerblock">
+                                                            <div class="content-header">
+                                                                <h2>The Best of USCCB Books</h2>
+                                                            </div>
+
+                                                            <div class="carousel-mobile">
+
+
+                                                                <div class="views-row">
+                                                                    <a href="https://store.usccb.org/products/ordination-of-a-bishop-of-priests-and-of-deacons?utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=ordination_bpd"
+                                                                        target="_blank">
+                                                                        <img alt="Ordination of a Bishop, of Priests, and of Deacons"
+                                                                            src="https://usccb.org/sites/default/files/styles/book_image/public/2021-11/Ordination-Cover-Panel_2.png?itok=IYZyN4l2"
+                                                                            class="image-style-book-image">
+                                                                        <div class="body">
+                                                                            <p>Ordination of a Bishop, of Priests, and
+                                                                                of Deacons</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+
+
+                                                                <div class="views-row">
+                                                                    <a href="https://store.usccb.org/products/national-directory-for-the-formation-ministry-and-life-of-permanent-deacons?_pos=2&amp;amp;_sid=68deae827&amp;amp;_ss=r&amp;amp;utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=permanent_deacons"
+                                                                        target="_blank">
+                                                                        <img alt="The National Directory for the Formation, Ministry, and Life of Permanent Deacons in the United States of America"
+                                                                            src="https://usccb.org/sites/default/files/styles/book_image/public/2021-09/DirectorDeacons_Store%20Panel.jpg?itok=oUV_2r0m"
+                                                                            class="image-style-book-image">
+                                                                        <div class="body">
+                                                                            <p>The National Directory for the Formation,
+                                                                                Ministry, and Life of Permanent Deacons
+                                                                                in the United States of America</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+
+
+                                                                <div class="views-row">
+                                                                    <a href="https://store.usccb.org/products/the-power-of-forgiveness-pope-francis-on-reconciliation?utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=power_of_forgiveness"
+                                                                        target="_blank">
+                                                                        <img alt="The Power of Forgiveness: Pope Francis on Reconciliation"
+                                                                            src="https://usccb.org/sites/default/files/styles/book_image/public/2021-08/PowerofForgiveness_StoreCover.jpg?itok=pG5ByNL-"
+                                                                            class="image-style-book-image">
+                                                                        <div class="body">
+                                                                            <p>The Power of Forgiveness: Pope Francis on
+                                                                                Reconciliation</p>
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="b-button-container to-center border-top border-bottom padding-bottom-xs padding-top-xxs bg-white wr-block">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="p-wrap col-lg-10 offset-lg-1">
+                                                    <div class="innerblock">
+                                                        <ul>
+                                                            <li class="item">
+                                                                <a href="https://bible.usccb.org/es/bible/lecturas/102615.cfm"
+                                                                    class="btn transparent blue small language-selector language-es"
+                                                                    hreflang="es">En Español</a>
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="/readings/calendar"
+                                                                    class="btn transparent blue small">View Calendar</a>
+
+                                                            </li>
+                                                            <li class="item">
+                                                                <a href="#subscribe"
+                                                                    class="btn-icon icon-email transparent blue small">Get
+                                                                    Daily Readings E-mails</a>
+
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="wr-block b-button-container social padding-top-m bg-white ">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
+                                                    <div class="innerblock">
+                                                        <div class="addthis_inline_share_toolbox"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="b-note wr-block small padding-top-l padding-bottom-l bg-white">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
+                                                    <div class="innerblock">
+
+                                                        <p>Lectionary for Mass for Use in the Dioceses of the United
+                                                            States, second typical edition, Copyright © 2001, 1998,
+                                                            1997, 1986, 1970 Confraternity of Christian Doctrine; Psalm
+                                                            refrain © 1968, 1981, 1997, International Committee on
+                                                            English in the Liturgy, Inc. All rights reserved. Neither
+                                                            this work nor any part of it may be reproduced, distributed,
+                                                            performed or displayed in any medium, including electronic
+                                                            or digital, without permission in writing from the copyright
+                                                            owner.</p>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <div class="wr-block b-signup daily-readings bg-container  padding-top padding-bottom-xl"
+                                        id="subscribe">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div
+                                                    class="p-wrap col-lg-10 offset-lg-1 col-xl-8 offset-xl-2 col-xxl-6 offset-xxl-3">
+                                                    <div class="innerblock">
+                                                        <h2>Get the Daily Readings<br>Every Morning</h2>
+                                                        <form class="subscribe-rest some-style" role="form"
+                                                            action="/api/feedblitz/subscribe" target="_blank"
+                                                            onsubmit="return false;"
+                                                            data-drupal-form-fields="email_group">
+                                                            <input id="name" class="name" maxlength="254"
+                                                                name="first_name" placeholder="Enter Your Name"
+                                                                required="required" size="60" type="text" value="">
+                                                            <input id="email" class="email" maxlength="254" name="email"
+                                                                placeholder="Enter Your Email Address"
+                                                                required="required" size="60" type="email" value=""
+                                                                data-pattern="email">
+                                                            <div class="checkboxes group">
+                                                                <input class="agree" id="checkbox-signup" name="agree"
+                                                                    required="required" style="" type="checkbox"
+                                                                    group="listID" value="1093293" data-pattern="true"
+                                                                    checked />
+                                                                <label for="checkbox-signup"> I Agree that the data I
+                                                                    provided to complete this transaction may be used
+                                                                    for that purpose and used and stored for
+                                                                    USCCB&#039;s inventory records and to evaluate
+                                                                    interest in USCCB&#039;s web pages. I further agree
+                                                                    to receive email communications about USCCB goods,
+                                                                    services and information. <a
+                                                                        href="http://usccb.org/about/privacy-policy.cfm"
+                                                                        target="_blank"> Privacy Policy. </a></label>
+                                                            </div>
+                                                            <button class="btn green form-submit" name="submit"
+                                                                type="submit" value="SUBSCRIBE">SUBSCRIBE</button>
+                                                            <div class="note">Email <a terget="_blank"
+                                                                    href="http://usccb.org/about/privacy-policy.cfm">Terms
+                                                                    &amp; Privacy</a></div>
+                                                            <input class="message" type="hidden" name="message"
+                                                                value="Thanks for signing up!<br><br>To complete the subscription process, please click the link in the email we just sent you.">
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="wr-block b-pager readings border-top bg-white padding-top-xs padding-bottom-l no-container">
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="p-wrap">
+                                                    <ul class="pager">
+                                                        <li><a href="/bible/readings/102515.cfm" class="prev" rel="prev"
+                                                                hreflang="en">October 25, 2015</a></li>
+                                                        <li class="current"><time datetime="2015-10-26">October 26,
+                                                                2015</time></li>
+                                                        <li><a href="/bible/readings/102715.cfm" class="next" rel="next"
+                                                                hreflang="en">October 27, 2015</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </main>
+        </div>
+        <footer id="footer" role="contentinfo">
+            <div class="footer-top">
+                <div id="block-importedfooter"
+                    class="block block-block-content block-block-contentb9bf0ef6-3238-49bf-88a2-de302da51266">
+
+
+
+                    <footer id="footer" role="contentinfo">
+                        <div class="footer-top">
+                            <div id="block-footer-top"
+                                class="wr-block b-button-container to-center padding-top-xl padding-bottom-m border-bottom block-system block-system-menu-blockfooter-top">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="p-wrap">
+                                            <div class="innerblock">
+
+                                                <h2>Dive into God's Word</h2>
+
+
+                                                <ul class="menu-list">
+                                                    <li class="menu-item">
+                                                        <a href="https://bible.usccb.org/"
+                                                            class="btn ocean light-blue transparent">Daily Readings</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="https://bible.usccb.org/podcasts/audio"
+                                                            class="btn ocean light-blue transparent">Listen to
+                                                            Podcasts</a>
+                                                    </li>
+                                                    <li class="menu-item">
+                                                        <a href="https://bible.usccb.org/podcasts/video"
+                                                            class="btn ocean light-blue transparent">Watch our
+                                                            Videos</a>
+                                                    </li>
+                                                </ul>
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="block-footer-about-usccb"
+                                class="wr-block b-footer-links width-minus padding-top-s block-block-content block-block-contentabce5388-21d1-4692-91ae-f80a92f2f37c">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="p-wrap">
+                                            <div class="innerblock">
+                                                <div class="content block-7-5">
+                                                    <div class="first">
+
+                                                        <h6>About USCCB</h6>
+
+                                                        <p>The United States Conference of Catholic Bishops’ (USCCB’s)
+                                                            mission is to encounter the mercy of Christ and to accompany
+                                                            His people with joy.</p>
+                                                    </div>
+                                                    <div class="second">
+                                                        <a href="https://usccb.org/about/index.cfm" class="btn">Learn
+                                                            More</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="footer-center">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="footer-center-first col-sm-6 col-lg-3">
+                                        <div class="views-element-container block block-views block-views-blockfooter-topics-block-1 wr-block b-footer-links padding-top-m padding-bottom-s"
+                                            id="block-views-block-footer-topics-block-1">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="p-wrap">
+                                                        <div class="innerblock">
+
+                                                            <h6>Topics</h6>
+
+                                                            <div
+                                                                class="js-view-dom-id-9c5af5d62fb56897bc50f350960b817f4c099c21a2fcfd79cf115d2829e220ca">
+
+
+
+
+
+
+
+
+                                                                <ul class="menu-list">
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/pro-life-activities/abortion">Abortion</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/international-justice-and-peace/africa">Africa</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/african-american-affairs">African
+                                                                            American</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/international-justice-and-peace/asia">Asia</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/asian-and-pacific-island-affairs">Asian/Pacific
+                                                                            Islander</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/pro-life-activities/assisted-suicide-euthanasia">Assisted
+                                                                            Suicide</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://bible.usccb.org/bible">Bible</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/pro-life-activities/bioethics-materials">Bioethics</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/evangelization-catechesis">Catechesis</a>
+                                                                    </li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/evangelization-catechesis/leadership-institute-catechetical-sunday-2020">Catechetical
+                                                                            Sunday</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/topics/catholic-safeguards">Catholic
+                                                                            Safeguards</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/offices/justice-peace-human-development/catholic-social-teaching">Catholic
+                                                                            Social Teaching</a></li>
+                                                                    <li class="menu-item"><a
+                                                                            href="https://usccb.org/committees/protection-children-young-people">Child
+                                                                            and Youth Protection</a></li>
+                                                                </ul>
+
+
+
+
+
+
+                                                                <a href="https://usccb.org/topics" class="more">EXPAND
+                                                                    ALL TOPICS</a>
+
+
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="footer-center-second col-sm-6 col-lg-3">
+                                        <div id="block-footer-prayer-worship"
+                                            class="wr-block b-footer-links padding-top-m padding-bottom-s block-system block-system-menu-blockfooter-prayer-worship">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="p-wrap">
+                                                        <div class="innerblock">
+
+                                                            <h6>Prayer &amp; Worship</h6>
+
+
+                                                            <ul class="menu-list">
+                                                                <li class="menu-item">
+                                                                    <a href="https://bible.usccb.org/readings/calendar">Daily
+                                                                        Readings Calendar</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://bible.usccb.org/bible">Books of the
+                                                                        BIble</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://www.usccb.org/mass-times">Search
+                                                                        Mass Times</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a
+                                                                        href="https://usccb.org/prayer-and-worship/prayers-and-devotions">Prayer</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/prayer-worship/liturgical-year"
+                                                                        data-drupal-link-system-path="node/49484">Liturgical
+                                                                        Year &amp; Calendar</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/prayer-and-worship/sacraments-and-sacramentals"
+                                                                        data-drupal-link-system-path="node/25826">Sacraments</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/prayer-and-worship/liturgy-of-the-hours"
+                                                                        data-drupal-link-system-path="node/25818">Liturgy
+                                                                        of the Hours</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/prayer-and-worship/the-mass"
+                                                                        data-drupal-link-system-path="node/25850">The
+                                                                        Mass</a>
+                                                                </li>
+                                                            </ul>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="footer-center-third col-sm-6 col-lg-3">
+                                        <div id="block-footer-act-now"
+                                            class="wr-block b-footer-links padding-top-m padding-bottom-s block-system block-system-menu-blockfooter-act-now">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="p-wrap">
+                                                        <div class="innerblock">
+
+                                                            <h6>Get Involved to Act Now</h6>
+
+
+                                                            <ul class="menu-list">
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/take-action"
+                                                                        data-drupal-link-system-path="node/30414">Take
+                                                                        Action</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/help-now"
+                                                                        data-drupal-link-system-path="node/25731">Help
+                                                                        Now</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/events"
+                                                                        data-drupal-link-system-path="events">Meetings
+                                                                        &amp; Events</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/issues-and-action/take-action-now/pray"
+                                                                        data-drupal-link-system-path="node/25851">Pray</a>
+                                                                </li>
+                                                            </ul>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="footer-center-four col-sm-6 col-lg-3">
+                                        <div id="block-footer-quick-links"
+                                            class="wr-block b-footer-links padding-top-m padding-bottom-s block-system block-system-menu-blockfooter-quick-links">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="p-wrap">
+                                                        <div class="innerblock">
+
+                                                            <h6>Quick Links</h6>
+
+
+                                                            <ul class="menu-list">
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/mass-times"
+                                                                        data-drupal-link-system-path="mass-times">Parish/Mass
+                                                                        Finder</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/resources"
+                                                                        data-drupal-link-system-path="node/25748">Resources</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/events"
+                                                                        data-drupal-link-system-path="events">Calendars</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/subscribe/email"
+                                                                        data-drupal-link-system-path="node/50856">E-mail
+                                                                        Signup</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://usccb.org/get-connected"
+                                                                        data-drupal-link-system-path="node/25811">Social
+                                                                        Media</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="http://www.catholicnews.com/"
+                                                                        target="_blank">Catholic News Service</a>
+                                                                </li>
+                                                                <li class="menu-item">
+                                                                    <a href="https://www.catholicnews.com/movie-reviews/"
+                                                                        target="_blank">Movie Reviews</a>
+                                                                </li>
+                                                            </ul>
+
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <div id="block-footer-copyrights"
+                                class="wr-block b-footer-social padding-top-xxs block-block-content block-block-content0fa4f9a0-12d6-4ead-8916-14bb0b50b99f">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="p-wrap">
+                                            <div class="innerblock">
+                                                <div class="content block-9-3">
+                                                    <div class="first">
+
+
+                                                        <p>©2022 United States Conference of Catholic Bishops</p>
+                                                    </div>
+                                                    <div class="second b-social">
+
+                                                        <ul class="nav">
+
+
+                                                            <li class="nav-item">
+                                                                <a href="https://twitter.com/usccb"
+                                                                    class="nav-link icon-twitter" target="_blank"
+                                                                    rel="nofollow">Twitter</a>
+                                                            </li>
+
+
+                                                            <li class="nav-item">
+                                                                <a href="https://www.facebook.com/usccb"
+                                                                    class="nav-link icon-facebook" target="_blank"
+                                                                    rel="nofollow">Facebook</a>
+                                                            </li>
+
+
+                                                            <li class="nav-item">
+                                                                <a href="https://www.youtube.com/user/usccb"
+                                                                    class="nav-link icon-youtube" target="_blank"
+                                                                    rel="nofollow">Youtube</a>
+                                                            </li>
+
+
+                                                            <li class="nav-item">
+                                                                <a href="https://www.linkedin.com/company/usccb/"
+                                                                    class="nav-link icon-linkedin" target="_blank"
+                                                                    rel="nofollow">Linkedin</a>
+                                                            </li>
+
+
+                                                            <li class="nav-item">
+                                                                <a href="https://www.instagram.com/usccb/"
+                                                                    class="nav-link icon-instagram" target="_blank"
+                                                                    rel="nofollow">Instagram</a>
+                                                            </li>
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="block-footer-bottom"
+                                class="wr-block b-button-container padding-top-s padding-bottom-m block-system block-system-menu-blockfooter-bottom">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="p-wrap">
+                                            <div class="innerblock">
+                                                <div class="content block-8-4">
+                                                    <div class="first">
+
+
+
+                                                        <ul class="nav">
+                                                            <li class="nav-item">
+                                                                <span class="linkoff">United States Conference of
+                                                                    Catholic Bishops is a 501(c)(3) non-profit
+                                                                    organization</span>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a href="https://usccb.org/about/privacy-policy"
+                                                                    class="nav-link" rel="nofollow"
+                                                                    data-drupal-link-system-path="node/48240">Privacy
+                                                                    Policy</a>
+                                                            </li>
+                                                        </ul>
+
+
+
+                                                    </div>
+                                                    <div class="second">
+                                                        <div class="region region-footer-bottom-right">
+                                                            <div id="block-made-possible-by"
+                                                                class="wr-block b-funding-from block block-block-content block-block-content7e1350e2-d4f6-4e48-b73e-2b6df0c70ab8">
+
+
+
+                                                                <div
+                                                                    class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                                                                    <div class="body">
+                                                                        <div class="first">
+                                                                            <p><a
+                                                                                    href="https://usccb.org/committees/catholic-communication-campaign">Made
+                                                                                    possible by funding from </a></p>
+                                                                        </div>
+
+                                                                        <div class="second">
+                                                                            <ul class="block-gallery">
+                                                                                <li>
+                                                                                    <span
+                                                                                        data-embed-button="embed_image"
+                                                                                        data-entity-embed-display="entity_reference:media_thumbnail"
+                                                                                        data-entity-embed-display-settings="internal:/committees/catholic-communication-campaign medium"
+                                                                                        data-entity-type="media"
+                                                                                        data-entity-uuid="166eaae6-ab79-406f-8cc2-9691ce1a061e"
+                                                                                        data-langcode="en"
+                                                                                        class="embedded-entity"><a
+                                                                                            href="https://usccb.org/committees/catholic-communication-campaign">
+                                                                                            <img src="/sites/default/files/styles/medium/public/2020-07/usccb_logo.png?itok=za3peyxE"
+                                                                                                width="220" height="91"
+                                                                                                alt="ccc-final"
+                                                                                                class="image-style-medium" />
+
+
+                                                                                        </a>
+                                                                                    </span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+                    </footer>
+
+                </div>
+                <div id="block-addthis"
+                    class="block block-block-content block-block-content61b53ed2-b04e-4a4f-a0f3-4af7fbb33c33">
+
+
+
+                    <script type="text/javascript"
+                        src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ea07c26c650231c"></script>
+
+                </div>
+                <div id="block-block-readings-books-float"
+                    class="block block-ai-html-parser block-readings-books-float">
+
+
+
+                    <div class="b-books-side-panel">
+                        <span class="icon-cancel"></span>
+                        <h2>Latest books</h2>
+                        <div class="content">
+
+
+
+
+                            <div class="views-row">
+                                <a href="https://store.usccb.org/products/ordination-of-a-bishop-of-priests-and-of-deacons?utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=ordination_bpd"
+                                    target="_blank" class="new">
+                                    <img alt="Ordination of a Bishop, of Priests, and of Deacons"
+                                        src="https://usccb.org/sites/default/files/styles/book_image/public/2021-11/Ordination-Cover-Panel_2.png?itok=IYZyN4l2"
+                                        class="image-style-book-image">
+                                </a>
+                            </div>
+
+
+
+                            <div class="views-row">
+                                <a href="https://store.usccb.org/products/national-directory-for-the-formation-ministry-and-life-of-permanent-deacons?_pos=2&amp;amp;_sid=68deae827&amp;amp;_ss=r&amp;amp;utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=permanent_deacons"
+                                    target="_blank" class="new">
+                                    <img alt="The National Directory for the Formation, Ministry, and Life of Permanent Deacons in the United States of America"
+                                        src="https://usccb.org/sites/default/files/styles/book_image/public/2021-09/DirectorDeacons_Store%20Panel.jpg?itok=oUV_2r0m"
+                                        class="image-style-book-image">
+                                </a>
+                            </div>
+
+
+
+                            <div class="views-row">
+                                <a href="https://store.usccb.org/products/the-power-of-forgiveness-pope-francis-on-reconciliation?utm_source=usccb.org&amp;amp;utm_medium=store_panel&amp;amp;utm_campaign=power_of_forgiveness"
+                                    target="_blank" class="regular">
+                                    <img alt="The Power of Forgiveness: Pope Francis on Reconciliation"
+                                        src="https://usccb.org/sites/default/files/styles/book_image/public/2021-08/PowerofForgiveness_StoreCover.jpg?itok=pG5ByNL-"
+                                        class="image-style-book-image">
+                                </a>
+                            </div>
+                            <a href="http://store.usccb.org/" class="btn green">VIEW MORE</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="footer-center">
+                <div class="container">
+                    <div class="row">
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <script type="application/json"
+        data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/20088","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"ai_feedblitz_service\/ai_subscribe,calendar\/calendar.theme,classy\/base,classy\/messages,classy\/node,core\/html5shiv,core\/normalize,eu_cookie_compliance\/eu_cookie_compliance_bare,obfuscate_email\/default,paragraphs\/drupal.paragraphs.unpublished,system\/base,usccb_readings\/global-styling,usccb_readings\/social-share","theme":"usccb_readings","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EThis website uses cookies. By continuing you are agreeing to our \u003Ca href=\u0022https:\/\/usccb.org\/about\/privacy-policy.cfm\u0022\u003EPrivacy Policy\u003C\/a\u003E\u003C\/p\u003E\n\n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EClose\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \n          \u003C\/div\u003E\n\n    \n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EClose\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"user":{"uid":0,"permissionsHash":"d249abfd3790208b54a926d7f50e59348ef80e4fa388af731f230d259c32fbd1"}}</script>
+    <script src="/sites/default/files/js/js_jx5AAs53sPCJp6P1gpNAVNS4bfEUB7-4IVVr8HXo8uk.js"></script>
+    <script src="/modules/custom/ai_feedblitz_service/js/ai_subscribe_rest.js?r535ic"></script>
+    <script src="/sites/default/files/js/js_UQcmXQinGvP8vUWKv2MU4vBOrUD7SPkw6XJM2tBPfe4.js"></script>
+
+    <script
+        type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam-cell.nr-data.net", "licenseKey": "NRJS-ec985e558554ae170a3", "applicationID": "603506239", "transactionName": "MVNaYBAEWBZWVEBbVwgZeVcWDFkLGHNGR0gHWmRaDQFTOXRYWkZKCVpUURA5eApTUmJbXRF1V1oWF1kJW1JGHwYQX11D", "queueTime": 0, "applicationTime": 280, "atts": "HRRZFlgeSxg=", "errorBeacon": "bam-cell.nr-data.net", "agent": "" }</script>
+</body>
+
+</html>
