@@ -31,9 +31,7 @@ export async function getCatholicDailyReadings(date?: Date) {
   //   logger.info("starting page...");
   console.log("starting page");
   const page = await browser.newPage();
-  await page.setUserAgent(
-    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36"
-  );
+  await page.setUserAgent("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36");
   await page.emulateTimezone("America/Detroit");
 
   // load page
@@ -51,10 +49,7 @@ export async function getCatholicDailyReadings(date?: Date) {
   console.log("getting readings");
   const readingNodes = await page.$$(".b-verse");
 
-  const readings: DailyReadings = await getDailyReadingsFromNodes(
-    lectionaryNode,
-    readingNodes
-  );
+  const readings: DailyReadings = await getDailyReadingsFromNodes(lectionaryNode, readingNodes);
 
   return readings;
 }
@@ -78,11 +73,7 @@ async function getDailyReadingsFromNodes(
   readingNodes: puppeteer.ElementHandle<Element>[]
 ): Promise<DailyReadings> {
   const readingPromises = readingNodes.map(getReadingFromNode);
-  const promises = [
-    getLectionaryHeaderFromNode(lectionaryNode),
-    getLectionaryNumberFromNode(lectionaryNode),
-    ...readingPromises,
-  ];
+  const promises = [getLectionaryHeaderFromNode(lectionaryNode), getLectionaryNumberFromNode(lectionaryNode), ...readingPromises];
 
   const [header, lectionary, ...readings] = await Promise.all(promises);
 
@@ -93,37 +84,33 @@ async function getDailyReadingsFromNodes(
   } as DailyReadings;
 }
 
-async function getLectionaryHeaderFromNode(
-  node: puppeteer.ElementHandle<Element>
-): Promise<string> {
-  return (
-    (await node?.$eval("div.innerblock h2", (el) => el.textContent?.trim())) ??
-    ""
-  );
+async function getLectionaryHeaderFromNode(node: puppeteer.ElementHandle<Element>): Promise<string> {
+  return (await node?.$eval("div.innerblock h2", (el) => el.textContent?.trim())) ?? "";
 }
 
-async function getLectionaryNumberFromNode(
-  node: puppeteer.ElementHandle<Element>
-): Promise<number> {
-  const lectionaryText =
-    (await node?.$eval("div.innerblock p", (el) => el.textContent?.trim())) ??
-    "";
+async function getLectionaryNumberFromNode(node: puppeteer.ElementHandle<Element>): Promise<number> {
+  const lectionaryText = (await node?.$eval("div.innerblock p", (el) => el.textContent?.trim())) ?? "";
   const match = lectionaryText.match(/[0-9]+/gm);
   if (!match) throw new Error("could not parse lectionary number");
   return +match[0];
 }
 
-async function getReadingFromNode(
-  node: puppeteer.ElementHandle<Element>
-): Promise<Reading> {
-  const promises = [
-    node?.$eval("div.content-header h3.name", (el) => el.textContent?.trim()),
-    node?.$eval("div.address a", (el) => el.textContent?.trim()),
-    node?.$eval("div.content-body", (el) => el.innerHTML.replace(/\&nbsp;/g, '')),
-  ];
+async function getReadingFromNode(node: puppeteer.ElementHandle<Element>): Promise<Reading> {
+  // build promises
+  const promises = [node?.$eval("div.content-header h3.name", (el) => el.textContent?.trim())];
 
+  const refNode = node?.$("div.address a");
+  if (!!refNode) {
+    const refPromise = refNode.then((a) => a?.evaluate((el) => el.textContent?.trim()));
+    promises.push(refPromise);
+  }
+
+  promises.push(node?.$eval("div.content-body", (el) => el.innerHTML.replace(/\&nbsp;/g, "")));
+
+  // resolve promises
   const [header, reference, content] = await Promise.all(promises);
 
+  // format text
   let formattedText = content?.replace("<br />", "\n");
   formattedText = formattedText?.replace("<br>", "");
   formattedText = formattedText?.replace("<p>", "");
