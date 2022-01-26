@@ -110,9 +110,12 @@ async function getReadingFromNode(node: puppeteer.ElementHandle<Element>): Promi
   // resolve promises
   const [header, reference, content] = await Promise.all(promises);
 
+  console.log("raw content:");
+  console.log({content});
+
   // format text
   let formattedText = content?.replace("<br />", "\n");
-  formattedText = formattedText?.replace("<br>", "");
+  formattedText = formattedText?.replace("<br>", "\n");
   formattedText = formattedText?.replace("<p>", "");
   formattedText = formattedText?.replace("</p>", "");
   formattedText = formattedText?.replace("<em>", "");
@@ -120,7 +123,7 @@ async function getReadingFromNode(node: puppeteer.ElementHandle<Element>): Promi
   formattedText = formattedText?.replace("<strong>", "");
   formattedText = formattedText?.replace("</strong>", "");
 
-  let nonFormattedText = content?.replace("<br />", " ");
+  let nonFormattedText = content?.replace("<br />", "");
   nonFormattedText = nonFormattedText?.replace("<br>", "");
   nonFormattedText = nonFormattedText?.replace("<p>", "");
   nonFormattedText = nonFormattedText?.replace("</p>", "");
