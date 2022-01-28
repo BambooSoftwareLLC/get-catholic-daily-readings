@@ -19,7 +19,7 @@ describe("get readings tests", () => {
     const firstReading = readings[0];
     expect(firstReading.header).to.equal("Reading I");
     expect(firstReading.reference).to.equal("1 Sm 18:6-9; 19:1-7");
-    expect(firstReading.rawText).to
+    expect(firstReading.rawText.trim()).to
       .equal(`<p>When David and Saul approached<br>
 (on David’s return after slaying the Philistine),<br>
 women came out from each of the cities of Israel to meet King Saul,<br>

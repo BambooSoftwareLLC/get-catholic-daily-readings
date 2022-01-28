@@ -1,5 +1,6 @@
 import puppeteer from "puppeteer";
 import { format } from "date-fns";
+import { parseReadings } from "./parser";
 
 export async function getCatholicDailyReadings(date?: Date) {
   // get page source
@@ -72,15 +73,16 @@ async function getDailyReadingsFromNodes(
   lectionaryNode: puppeteer.ElementHandle<Element>,
   readingNodes: puppeteer.ElementHandle<Element>[]
 ): Promise<DailyReadings> {
-  const readingPromises = readingNodes.map(getReadingFromNode);
+  const readingPromises = readingNodes.map(getReadingsFromNode);
   const promises = [getLectionaryHeaderFromNode(lectionaryNode), getLectionaryNumberFromNode(lectionaryNode), ...readingPromises];
 
   const [header, lectionary, ...readings] = await Promise.all(promises);
+  const flatReadings = (readings as Reading[][]).flat();
 
   return {
     header,
     lectionary,
-    readings,
+    readings: flatReadings,
   } as DailyReadings;
 }
 
@@ -95,7 +97,7 @@ async function getLectionaryNumberFromNode(node: puppeteer.ElementHandle<Element
   return +match[0];
 }
 
-async function getReadingFromNode(node: puppeteer.ElementHandle<Element>): Promise<Reading> {
+async function getReadingsFromNode(node: puppeteer.ElementHandle<Element>): Promise<Reading[]> {
   // build promises
   const promises = [node?.$eval("div.content-header h3.name", (el) => el.textContent?.trim())];
 
@@ -110,33 +112,5 @@ async function getReadingFromNode(node: puppeteer.ElementHandle<Element>): Promi
   // resolve promises
   const [header, reference, content] = await Promise.all(promises);
 
-  console.log("raw content:");
-  console.log({content});
-
-  // format text
-  let formattedText = content?.replace("<br />", "\n");
-  formattedText = formattedText?.replace("<br>", "\n");
-  formattedText = formattedText?.replace("<p>", "");
-  formattedText = formattedText?.replace("</p>", "");
-  formattedText = formattedText?.replace("<em>", "");
-  formattedText = formattedText?.replace("</em>", "");
-  formattedText = formattedText?.replace("<strong>", "");
-  formattedText = formattedText?.replace("</strong>", "");
-
-  let nonFormattedText = content?.replace("<br />", "");
-  nonFormattedText = nonFormattedText?.replace("<br>", "");
-  nonFormattedText = nonFormattedText?.replace("<p>", "");
-  nonFormattedText = nonFormattedText?.replace("</p>", "");
-  nonFormattedText = nonFormattedText?.replace("<em>", "");
-  nonFormattedText = nonFormattedText?.replace("</em>", "");
-  nonFormattedText = nonFormattedText?.replace("<strong>", "");
-  nonFormattedText = nonFormattedText?.replace("</strong>", "");
-
-  return {
-    header,
-    reference,
-    rawText: content?.trim().replace("&nbsp;", ""),
-    nonFormattedText,
-    formattedText,
-  } as Reading;
+  return parseReadings(header as string, reference as string, content as string);
 }
