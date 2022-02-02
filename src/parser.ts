@@ -3,8 +3,8 @@ import { JSDOM } from "jsdom";
 
 export function parseReadings(header: string, reference: string, content: string): Reading[] {
   // check for optional readings
-  const orLocation = content.indexOf("<strong>OR:</strong>");
-  const mainContent = orLocation > -1 ? content.substring(0, orLocation) : content;
+  const orLocation = content.indexOf("<strong>OR");
+  const mainContent = (orLocation > -1 ? content.substring(0, orLocation) : content);
 
   const readings: Reading[] = [];
   // parse main reading
@@ -67,8 +67,8 @@ function getNextReference(nextContent: string, orLocation: number): { reference:
   const nextAnchorLocation = nextContent.indexOf("<a ");
   const nextAnchorCloseLocation = nextContent.indexOf("</a>");
 
-  if (nextAnchorLocation < 0 || nextAnchorCloseLocation < 0) {
-    return { reference: "", contentStart: 0 };
+  if (nextAnchorLocation < 0 || nextAnchorCloseLocation < 0 && nextContent.startsWith("<strong>OR")) {
+    return { reference: "", contentStart: "<strong>".length };
   }
 
   const nextAnchorHtml = `${nextContent.substring(nextAnchorLocation, nextAnchorCloseLocation)}</a>`;

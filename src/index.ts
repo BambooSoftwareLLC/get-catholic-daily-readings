@@ -107,7 +107,11 @@ async function getReadingsFromNode(node: puppeteer.ElementHandle<Element>): Prom
     promises.push(refPromise);
   }
 
-  promises.push(node?.$eval("div.content-body", (el) => el.innerHTML.replace(/\&nbsp;/g, "")));
+  promises.push(
+    node?.$eval("div.content-body", (el) =>
+      el.innerHTML.replace(/(^&nbsp;)|((?<=\&nbsp;)&nbsp;)|((?<=\s)&nbsp;)/gm, "").replace(/&nbsp;/g, " ")
+    )
+  );
 
   // resolve promises
   const [header, reference, content] = await Promise.all(promises);
