@@ -215,10 +215,10 @@ according to the law of Moses,
 Mary and Joseph took Jesus up to Jerusalem
 to present him to the Lord,
 just as it is written in the law of the Lord,
-Every male that opens the womb shall be consecrated to the Lord,
+*Every male that opens the womb shall be consecrated to the Lord*,
 and to offer the sacrifice of
-a pair of turtledoves or two young pigeons,
-in accordance with the dictate in the law of the Lord. 
+*a pair of turtledoves or two young pigeons*,
+in accordance with the dictate in the law of the Lord.
 
 Now there was a man in Jerusalem whose name was Simeon.
 This man was righteous and devout,
@@ -226,13 +226,13 @@ awaiting the consolation of Israel,
 and the Holy Spirit was upon him.
 It had been revealed to him by the Holy Spirit
 that he should not see death
-before he had seen the Christ of the Lord. 
+before he had seen the Christ of the Lord.
 He came in the Spirit into the temple;
 and when the parents brought in the child Jesus
 to perform the custom of the law in regard to him,
 he took him into his arms and blessed God, saying:
 
-\"Now, Master, you may let your servant go 
+\"Now, Master, you may let your servant go
 in peace, according to your word,
 for my eyes have seen your salvation,
 which you prepared in the sight of all the peoples:
@@ -273,10 +273,10 @@ according to the law of Moses,
 Mary and Joseph took Jesus up to Jerusalem
 to present him to the Lord,
 just as it is written in the law of the Lord,
-Every male that opens the womb shall be consecrated to the Lord,
+*Every male that opens the womb shall be consecrated to the Lord*,
 and to offer the sacrifice of
-a pair of turtledoves or two young pigeons,
-in accordance with the dictate in the law of the Lord. 
+*a pair of turtledoves or two young pigeons*,
+in accordance with the dictate in the law of the Lord.
 
 Now there was a man in Jerusalem whose name was Simeon.
 This man was righteous and devout,
@@ -284,13 +284,13 @@ awaiting the consolation of Israel,
 and the Holy Spirit was upon him.
 It had been revealed to him by the Holy Spirit
 that he should not see death
-before he had seen the Christ of the Lord. 
+before he had seen the Christ of the Lord.
 He came in the Spirit into the temple;
 and when the parents brought in the child Jesus
 to perform the custom of the law in regard to him,
 he took him into his arms and blessed God, saying:
 
-\"Now, Master, you may let your servant go 
+\"Now, Master, you may let your servant go
 in peace, according to your word,
 for my eyes have seen your salvation,
 which you prepared in the sight of all the peoples:

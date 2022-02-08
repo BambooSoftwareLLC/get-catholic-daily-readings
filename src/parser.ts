@@ -39,7 +39,8 @@ function parseNonFormatted(content: string): string {
     .replace(/<[/]strong>/g, "")
     .replace(/^\s\s+/g, "")
     .replace(/[\u2018\u2019]/g, "'")
-    .replace(/[\u201C\u201D]/g, '"');
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/ \n/g, "\n");
 
   return nonFormatted.trim();
 }
@@ -50,14 +51,16 @@ function parseFormatted(content: string): string {
     .replace(/<br>/g, "\n")
     .replace(/<p>/g, "")
     .replace(/<\/p>/g, "")
-    .replace(/<em>/g, "")
-    .replace(/<\/em>/g, "")
+    .replace(/<em>/g, "*")
+    .replace(/<\/em>/g, "*")
+    .replace(/\* /g, "*")
     .replace(/<strong>/g, "")
     .replace(/<\/strong>/g, "")
     .replace(/  +/g, "")
     .replace(/\n\n/g, "\n")
     .replace(/[\u2018\u2019]/g, "'")
-    .replace(/[\u201C\u201D]/g, '"');
+    .replace(/[\u201C\u201D]/g, '"')
+    .replace(/ \n/g, "\n");
 
   return formatted.trim();
 }

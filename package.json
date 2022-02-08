@@ -1,6 +1,6 @@
 {
   "name": "get-catholic-daily-readings",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "Utility to get the daily Catholic readings from the internet",
   "main": "dist/index.js",
   "scripts": {
