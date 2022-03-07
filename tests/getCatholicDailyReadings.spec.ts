@@ -55,7 +55,7 @@ Saul heeded Jonathan’s plea and swore, <br>
 “As the LORD lives, he shall not be killed.”<br>
 So Jonathan summoned David and repeated the whole conversation to him.<br>
 Jonathan then brought David to Saul, and David served him as before.</p>`);
-  }).timeout(4000);
+  }).timeout(40000);
 
   it("should work for another date", async () => {
     const rawDate = new Date("2022-02-02");

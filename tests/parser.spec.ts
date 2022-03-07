@@ -361,7 +361,66 @@ that they may offer due sacrifice to the Lord.
 Then the sacrifice of Judah and Jerusalem
 will please the Lord,
 as in the days of old, as in years gone by.`,
-      } as Reading
+      } as Reading,
+    ];
+
+    const readings = parseReadings(fakeHeader, firstReference, content);
+
+    expect(readings.length).to.be.equal(1);
+
+    const readingOne = readings[0];
+    const expectedReadingOne = expectedReadings[0];
+    expect(readingOne.header).to.equal(expectedReadingOne.header);
+    expect(readingOne.reference).to.equal(expectedReadingOne.reference);
+    expect(readingOne.formattedText).to.equal(expectedReadingOne.formattedText);
+  });
+
+  it("should not have span tags in the final result", () => {
+    const content = `<p>            Thus says the Lord GOD:<br />
+    Lo, I am sending my messenger<br />
+                to prepare the way before me;<br />
+    And suddenly there will come to the temple<br />
+                the Lord whom you seek,<br />
+    And the messenger of the covenant whom you desire.<br />
+                Yes, he is coming, says the Lord of hosts.<br />
+    But who will endure the day of his coming?<br />
+                And who can stand when he appears?<br />
+    For he is like the refiner’s fire,<br />
+                or like the fuller’s lye.<br />
+    He will sit refining and purifying silver,<br />
+                and he will purify the sons of Levi,<br />
+    Refining them like gold or like silver<br />
+                that they may offer due sacrifice to the Lord.<br />
+    Then the sacrifice of Judah and Jerusalem<br />
+                will please the Lord,<br />
+                as in the days of old, as in years gone by.</p></span></span>`;
+
+    const fakeHeader = "Reading 1";
+    const firstReference = "Mal 3:1-4";
+
+    const expectedReadings: Reading[] = [
+      {
+        header: fakeHeader,
+        reference: firstReference,
+        formattedText: `Thus says the Lord GOD:
+Lo, I am sending my messenger
+to prepare the way before me;
+And suddenly there will come to the temple
+the Lord whom you seek,
+And the messenger of the covenant whom you desire.
+Yes, he is coming, says the Lord of hosts.
+But who will endure the day of his coming?
+And who can stand when he appears?
+For he is like the refiner's fire,
+or like the fuller's lye.
+He will sit refining and purifying silver,
+and he will purify the sons of Levi,
+Refining them like gold or like silver
+that they may offer due sacrifice to the Lord.
+Then the sacrifice of Judah and Jerusalem
+will please the Lord,
+as in the days of old, as in years gone by.`,
+      } as Reading,
     ];
 
     const readings = parseReadings(fakeHeader, firstReference, content);
